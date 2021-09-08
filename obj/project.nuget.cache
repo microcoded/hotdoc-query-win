@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0GyeLh9cFudgEk9udQ9vTJYmSoo6LBIwAdSkx1EBdWb4gCkwy3x2ifKTsNvZe8vJSQYXG4Mo5rzr5fU3wfUtNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jacob\\Desktop\\hotdoc-query-win\\hotdoc-query-win.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jacob\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
