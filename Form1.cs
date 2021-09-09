@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 using RestSharp;
 using RestSharp.Authenticators;
+using RestSharp.Serialization.Json;
 
 namespace hotdoc_query_win
 {
@@ -18,7 +19,8 @@ namespace hotdoc_query_win
     {
         int radio = 0;
         bool stop = true;
-
+        int counter = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -50,15 +52,15 @@ namespace hotdoc_query_win
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Suburb: " + suburbInput.Text);
-            System.Diagnostics.Debug.WriteLine("State: " + stateBox.Text);
+            Debug.WriteLine("Suburb: " + suburbInput.Text);
+            Debug.WriteLine("State: " + stateBox.Text);
             if (postcodeInput.Text != "") { System.Diagnostics.Debug.WriteLine("Postcode: " + Int32.Parse(postcodeInput.Text)); }
-            System.Diagnostics.Debug.WriteLine("Vaccine: " + vaccineBox.Text);
-            System.Diagnostics.Debug.WriteLine("Dose: " + radio);
-            System.Diagnostics.Debug.WriteLine("Availability: " + availabilityBox.Text);
+            Debug.WriteLine("Vaccine: " + vaccineBox.Text);
+            Debug.WriteLine("Dose: " + radio);
+            Debug.WriteLine("Availability: " + availabilityBox.Text);
 
             stop = false;
-
+            counter = 0;
 
             // Begin conversion from main.py
 
@@ -118,21 +120,30 @@ namespace hotdoc_query_win
 
                 // Get response from server
                 var response = client.Get(request);
-                System.Diagnostics.Debug.WriteLine(response.Content);
-                System.Diagnostics.Debug.WriteLine(client.BuildUri(request));
+                Debug.WriteLine(response.Content);
+                var apiResponse = new JsonSerializer().Deserialize<Rootobject>(response);
 
 
-
+            
 
             // Every clinic
-            
-            
+            foreach (var clinic in apiResponse.clinics)
+            {
+                Debug.WriteLine($"{clinic.name} is available!");
+                counter++;
 
+                
+            }
+
+            if (counter == 0)
+            {
+                Debug.WriteLine("None found");
+            }
 
 
             // URL for user
             string user_url = $"https://www.hotdoc.com.au/search?filters={type}covid_vaccine_dose-{dose}%2Ccovid_vaccine_availability-{availability}&in={suburb}-{state}-{postcode}&purpose=covid-vaccine";
-                System.Diagnostics.Debug.WriteLine(user_url);
+            Debug.WriteLine(user_url);
                 
 
             //}

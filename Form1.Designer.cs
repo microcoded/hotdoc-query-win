@@ -45,6 +45,7 @@ namespace hotdoc_query_win
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.availabilityBox = new System.Windows.Forms.ListBox();
+            this.listView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label1
@@ -207,11 +208,21 @@ namespace hotdoc_query_win
             this.availabilityBox.Size = new System.Drawing.Size(119, 64);
             this.availabilityBox.TabIndex = 14;
             // 
+            // listView
+            // 
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(425, 77);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(288, 257);
+            this.listView.TabIndex = 15;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.availabilityBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -253,6 +264,7 @@ namespace hotdoc_query_win
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox availabilityBox;
+        private System.Windows.Forms.ListView listView;
     }
 }
 
