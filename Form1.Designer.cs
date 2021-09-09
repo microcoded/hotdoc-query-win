@@ -45,7 +45,11 @@ namespace hotdoc_query_win
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.availabilityBox = new System.Windows.Forms.ListBox();
-            this.listView = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -167,7 +171,7 @@ namespace hotdoc_query_win
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 406);
+            this.button1.Location = new System.Drawing.Point(36, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
@@ -177,7 +181,7 @@ namespace hotdoc_query_win
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(147, 406);
+            this.button2.Location = new System.Drawing.Point(139, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -208,21 +212,64 @@ namespace hotdoc_query_win
             this.availabilityBox.Size = new System.Drawing.Size(119, 64);
             this.availabilityBox.TabIndex = 14;
             // 
-            // listView
+            // listView1
             // 
-            this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(425, 77);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(288, 257);
-            this.listView.TabIndex = 15;
-            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(266, 27);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(522, 402);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(341, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(0, 15);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.Location = new System.Drawing.Point(266, 8);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(75, 15);
+            this.searchLabel.TabIndex = 17;
+            this.searchLabel.Text = "Searching at:";
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 414);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 15);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "a";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 429);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 15);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "a";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.searchLabel);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.availabilityBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -264,7 +311,11 @@ namespace hotdoc_query_win
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox availabilityBox;
-        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

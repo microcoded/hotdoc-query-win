@@ -18,3 +18,4 @@ C:\Users\jacob\Desktop\hotdoc-query-win\obj\Debug\net5.0-windows\hotdoc-query-wi
 C:\Users\jacob\Desktop\hotdoc-query-win\obj\Debug\net5.0-windows\hotdoc-query-win.genruntimeconfig.cache
 C:\Users\jacob\Desktop\hotdoc-query-win\bin\Debug\net5.0-windows\RestSharp.dll
 C:\Users\jacob\Desktop\hotdoc-query-win\obj\Debug\net5.0-windows\hotdoc-query-win.csproj.CopyComplete
+C:\Users\jacob\Desktop\hotdoc-query-win\obj\Debug\net5.0-windows\hotdoc_query_win.Properties.Resources.resources

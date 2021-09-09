@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>hotdoc-query-win</id>
+    <version>1.0.0</version>
+    <authors>hotdoc-query-win</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="RestSharp" version="106.12.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\jacob\Desktop\hotdoc-query-win\bin\Debug\net5.0-windows\hotdoc-query-win.runtimeconfig.json" target="lib\net5.0-windows7.0\hotdoc-query-win.runtimeconfig.json" />
+    <file src="C:\Users\jacob\Desktop\hotdoc-query-win\bin\Debug\net5.0-windows\hotdoc-query-win.dll" target="lib\net5.0-windows7.0\hotdoc-query-win.dll" />
+  </files>
+</package>
