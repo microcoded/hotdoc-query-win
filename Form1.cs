@@ -19,7 +19,7 @@ namespace hotdoc_query_win
     {
         int radio = 0;
         int counter = 0;
-        int sleeptime = 30000;
+        int sleeptime = 60000;
         Timer t = new Timer();
         string user_url = "";
         string results = "";
